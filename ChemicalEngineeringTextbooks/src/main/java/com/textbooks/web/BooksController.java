@@ -16,36 +16,36 @@ import com.textbooks.business.BooksRepository;
 
 
 @Controller
-@RequestMapping("/Textbooks") // call user controller
+@RequestMapping("/Books") // call user controller
 public class BooksController {
 	@Autowired
-	private BooksRepository textbooksRepository; // variable that calls out CRUD methods
+	private BooksRepository booksRepository; // variable that calls out CRUD methods
 	
 	@GetMapping("/List")
 	public @ResponseBody Iterable<Books> getAllTextbooks() {
-		Iterable<Books> textbooks = textbooksRepository.findAll();
-		return textbooks; // return in iterable list of vendors		
+		Iterable<Books> books = booksRepository.findAll();
+		return books; // return in iterable list of vendors		
 	}
 	
 	@GetMapping("/Get")
 	public @ResponseBody Optional<Books> getTextbook(@RequestParam int id) {
-		Optional<Books> textbooks = textbooksRepository.findById(id);
-		return textbooks; // return in iterable list of vendors		
+		Optional<Books> books = booksRepository.findById(id);
+		return books; // return in iterable list of vendors		
 	}
 	
 	@PostMapping("/Add")
-	public @ResponseBody Books addTextbook(@RequestBody Books textbooks) {
-		return textbooksRepository.save(textbooks);
+	public @ResponseBody Books addTextbook(@RequestBody Books books) {
+		return booksRepository.save(books);
 	}
 	
 	@PostMapping("/Change")
-	public @ResponseBody Books updateTextbook(@RequestBody Books textbooks) {
-		return textbooksRepository.save(textbooks);
+	public @ResponseBody Books updateTextbook(@RequestBody Books books) {
+		return booksRepository.save(books);
 	}
 	
 	@PostMapping("/Remove")
-	public @ResponseBody String removeTextbook(@RequestBody Books textbooks) {
-		textbooksRepository.delete(textbooks);
+	public @ResponseBody String removeTextbook(@RequestBody Books books) {
+		booksRepository.delete(books);
 		return "textbooks deleted";
 	}
 }
