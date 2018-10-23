@@ -31,9 +31,16 @@ public class MovieController {
 		try {
 			return JsonResponse.getInstance(movieRepository.findAll());
 		} catch (Exception e) {
-			return JsonResponse.getErrorInstance("Movie list failure:" + e.getMessage(), e);
+			return JsonResponse.getErrorInstance("Movie list failure: " + e.getMessage(), e);
 		}
 	}
+	
+	/*
+	 * @GetMapping("/List")
+	 * public @ResponseBody Iterable<Movie> getAllMovies() {
+	 * 	return movieRepository.findAll();
+	 * }
+	 */
 
 	@GetMapping("/Get/{id}")
 	public @ResponseBody JsonResponse getMovie(@PathVariable int id) {
@@ -44,7 +51,7 @@ public class MovieController {
 			else
 				return JsonResponse.getErrorInstance("Movie not found for id: " + id, null);
 		} catch (Exception e) {
-			return JsonResponse.getErrorInstance("Error getting movie:  " + e.getMessage(), null);
+			return JsonResponse.getErrorInstance("Error getting movie: " + e.getMessage(), null);
 		}
 	}
 

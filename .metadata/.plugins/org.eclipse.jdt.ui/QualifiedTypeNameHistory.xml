@@ -14,7 +14,6 @@
 <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
 <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
 <fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
-<fullyQualifiedTypeName name="javax.persistence.Entity"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
@@ -45,4 +44,12 @@
 <fullyQualifiedTypeName name="java.sql.Timestamp"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
 <fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="com.bmdb.business.actor.ActorRepository"/>
+<fullyQualifiedTypeName name="com.bmdb.business.actor.Actor"/>
+<fullyQualifiedTypeName name="com.bmdb.business.credits.CreditsRepository"/>
+<fullyQualifiedTypeName name="com.bmdb.business.credits.Credits"/>
+<fullyQualifiedTypeName name="com.bmdb.business.movie.MovieRepository"/>
+<fullyQualifiedTypeName name="com.bmdb.util.JsonResponse"/>
+<fullyQualifiedTypeName name="com.bmdb.business.movie.Movie"/>
 </qualifiedTypeNameHistroy>
